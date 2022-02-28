@@ -1,0 +1,13 @@
+$color-white: #fff;
+$color-black: #000;
+$color-grey: #1e1e1e;
+$color-green: #76b900;
+$color-text: #afafaf;
+
+:root {
+  --c-white: #{$color-white};
+  --c-black: #{$color-black};
+  --c-grey: #{$color-grey};
+  --c-green: #{$color-green};
+  --c-text: #{$color-text};
+}
