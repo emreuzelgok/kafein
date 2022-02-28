@@ -6,11 +6,13 @@ import './Container.scss';
 type ContainerProps = {
   fluid?: boolean;
   className?: string;
+  fullHeight?: boolean;
 };
 
-const Container:FC<ContainerProps> = ({ fluid, children, className }) => {
+const Container:FC<ContainerProps> = ({ fluid, children, fullHeight, className }) => {
   const classNames = cx('container', className, {
     'container--fluid': fluid,
+    'container--full-height': fullHeight,
   });
   return (
     <div className={classNames}>

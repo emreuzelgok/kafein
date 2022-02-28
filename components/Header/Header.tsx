@@ -17,7 +17,7 @@ const menuItems = [
 
 const Header:FC<HeaderProps> = ({}) => {
   return (
-    <div className="header">
+    <header className="header">
       <Container fluid>
         <Container className="header__container">
           <div className="header__logo">
@@ -40,7 +40,7 @@ const Header:FC<HeaderProps> = ({}) => {
           </div>
         </Container>
       </Container>
-    </div>
+    </header>
   );
 }
 

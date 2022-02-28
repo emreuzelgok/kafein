@@ -1,5 +1,6 @@
 .link {
   text-decoration: none;
+  color: var(--c-grey);
   &--primary {
     color: var(--c-black);
     font-weight: 600;
@@ -22,6 +23,15 @@
     &:hover:after {
       opacity: 1;
     }
+  }
+  &--secondary {
+    font-size: 12px;
+    line-height: 1.83;
+    font-weight: 600;
+    color: var(--c-white);
+  }
+  &--block {
+    display: block;
   }
   &--active {
     &::after {

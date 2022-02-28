@@ -6,14 +6,18 @@ import './Link.scss';
 
 type LinkProps = LinkBaseProps & {
   primary?: boolean;
+  secondary?: boolean;
+  block?: boolean;
   title?: string;
   showActiveState?: boolean;
 };
 
-const AppLink:FC<LinkProps> = ({ primary, href, title, children, showActiveState, ...rest }) => {
+const AppLink:FC<LinkProps> = ({ primary, secondary, block, href, title, children, showActiveState, ...rest }) => {
   const { asPath } = useRouter();
   const classNames = cx('link', {
     'link--primary': primary,
+    'link--secondary': secondary,
+    'link--block': block,
     'link--active': showActiveState && asPath === href,
   });
   return (

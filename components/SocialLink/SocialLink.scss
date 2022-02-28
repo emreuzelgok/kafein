@@ -1,0 +1,7 @@
+.social-link {
+  color: var(--c-black);
+  display: inline-flex;
+  & + & {
+    margin-left: 16px;
+  }
+}
