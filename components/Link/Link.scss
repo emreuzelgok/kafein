@@ -1,0 +1,31 @@
+.link {
+  text-decoration: none;
+  &--primary {
+    color: var(--c-black);
+    font-weight: 600;
+    letter-spacing: 0.57px;
+    padding: 28px 20px;
+    position: relative;
+    &:after {
+      transition: all ease-in-out 300ms;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      opacity: 0;
+      transform: translateX(-50%);
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-bottom-color: var(--c-green);
+    }
+    &:hover:after {
+      opacity: 1;
+    }
+  }
+  &--active {
+    &::after {
+      opacity: 1;
+    }
+  }
+}

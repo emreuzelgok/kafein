@@ -1,0 +1,17 @@
+.header {
+  height: 80px;
+  background-color: var(--c-white);
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  &__cta {
+    margin-left: 40px;
+  }
+}

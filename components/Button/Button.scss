@@ -1,0 +1,10 @@
+.button {
+  border-color: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  &--primary {
+    background-color: var(--c-green);
+    color: var(--c-white);
+    padding: 6px 40px;
+  }
+}
