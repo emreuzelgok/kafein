@@ -3,20 +3,19 @@ import Container from '../Container';
 import cx from 'classnames';
 import './PageCover.scss';
 
-type PageCoverProps = {};
+type PageCoverProps = {
+  title?: string;
+  description?: string; 
+};
 
-const PageCover:FC<PageCoverProps> = ({ children }) => {
+const PageCover:FC<PageCoverProps> = ({ children, title, description }) => {
   const classNames = cx('page-cover');
   return (
     <div className={classNames}>
       <Container fullHeight>
         <div className="page-cover__content">
-          <h1 className="page-cover__title">
-            Lorem ipsum dolor sit amet consectetur
-          </h1>
-          <p className="page-cover__desc">
-            With the Cloud Gaming, you can join, play, and share games online with anyone in the world. Play any game on any device!
-          </p>
+          <h1 className="page-cover__title">{title}</h1>
+          <p className="page-cover__desc">{description}</p>
           <div className="page-cover__child">{children}</div>
         </div>
       </Container>
