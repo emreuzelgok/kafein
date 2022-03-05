@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Link, { LinkProps as LinkBaseProps } from 'next/link';
+import LinkBase, { LinkProps as LinkBaseProps } from 'next/link';
 import { useRouter } from 'next/router';
 import cx from 'classnames';
 import './Link.scss';
@@ -12,7 +12,7 @@ type LinkProps = LinkBaseProps & {
   showActiveState?: boolean;
 };
 
-const AppLink:FC<LinkProps> = ({ primary, secondary, block, href, title, children, showActiveState, ...rest }) => {
+const Link:FC<LinkProps> = ({ primary, secondary, block, href, title, children, showActiveState, ...rest }) => {
   const { asPath } = useRouter();
   const classNames = cx('link', {
     'link--primary': primary,
@@ -22,12 +22,12 @@ const AppLink:FC<LinkProps> = ({ primary, secondary, block, href, title, childre
     'link--active': showActiveState && asPath === href,
   });
   return (
-    <Link href={href} {...rest}>
+    <LinkBase href={href} {...rest}>
       <a className={classNames}>
         {title || children}
       </a>
-    </Link>
+    </LinkBase>
   );
 }
 
-export default AppLink;
+export default Link;
