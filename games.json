@@ -323,5 +323,91 @@
       "Sports",
       "Racing"
     ]
+  },
+  {
+    "id": 28,
+    "name": "Earn to Die",
+    "state": [
+      "Available",
+      "Patching"
+    ],
+    "genres": [
+      "Platformer",
+      "Horror",
+      "Casual"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Earn To Die 2 Exodus",
+    "state": [
+      "Patching",
+      "Available"
+    ],
+    "genres": [
+      "Casual",
+      "Shooters",
+      "Kids/Family"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Earn To Die 2012",
+    "state": [
+      "Maintenance",
+      "Available"
+    ],
+    "genres": [
+      "Kids/Family",
+      "Casual",
+      "Adventure"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Earn To Die 2012 Part 2",
+    "state": [
+      "Available"
+    ],
+    "genres": [
+      "Casual",
+      "Shooters",
+      "Open World"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Earth Defense",
+    "state": [
+      "Patching",
+      "Available"
+    ],
+    "genres": [
+      "Shooters",
+      "Horror"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Earth Taken",
+    "state": [
+      "Maintenance"
+    ],
+    "genres": [
+      "MOBA/MMO",
+      "Strategy"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Earth Taken 2",
+    "state": [
+      "Available",
+      "Patching"
+    ],
+    "genres": [
+      "Sports",
+      "Racing"
+    ]
   }
 ]
