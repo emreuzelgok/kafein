@@ -46,9 +46,9 @@ const SearchBox:FC<SearchBoxProps> = ({}) => {
   const searchBoxRef = useRef(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const games = useAppSelector(selectGamesNames);
-  const filteredGames = games.slice(0, 10).filter(item => {
+  const filteredGames = games.filter(item => {
     return item.toLowerCase().startsWith(query.toLocaleLowerCase());
-  });
+  }).slice(0, 10);
 
   useOnClickOutside(searchBoxRef, () => setShowSuggestions(false));
 
