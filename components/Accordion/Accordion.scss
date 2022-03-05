@@ -1,6 +1,6 @@
 .accordion {
   &__trigger {
-    padding: 0;
+    padding: 10px 0;
     margin: 0;
     background: transparent;
     border: 0;
@@ -19,7 +19,7 @@
     transform: rotate(180deg);
   }
   &__content {
-    margin-top: 30px;
+    margin-top: 20px;
     height: 0;
     overflow: hidden;
   }
@@ -32,6 +32,6 @@
     }
   }
   & + & {
-    margin-top: 60px;
+    margin-top: 54px;
   }
 }

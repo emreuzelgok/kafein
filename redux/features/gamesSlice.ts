@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction, createSelector } from '@reduxjs/toolkit'
+import { createSlice, createSelector } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 import games from '../../games.json';
 import { TGame } from '../../types';

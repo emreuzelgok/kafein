@@ -29,7 +29,7 @@ const Home: NextPage = () => {
       </PageHeader>
       <Container flex>
         <Sidebar />
-        <div style={{ flexGrow: 1 }}>
+        <Container grow>
           {letters.map((letter, idx) => {
             const games = items.filter(item => item.name.toLocaleLowerCase()[0] === letter);
             return !!games.length && (
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
               </LetterCard>
             );
           })}
-        </div>
+        </Container>
       </Container>
     </div>
   )
