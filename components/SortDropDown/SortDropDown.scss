@@ -1,0 +1,19 @@
+.sort-drop-down {
+  &__item {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: var(--c-text);
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+    cursor: pointer;
+    &:hover {
+      color: var(--c-white);
+    }
+    & + & {
+      margin-top: 16px;
+    }
+  }
+}

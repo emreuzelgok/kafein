@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import Container from '../Container';
 import Link from '../Link';
 import SocialLink from '../SocialLink';
+import DropDown from '../DropDown';
 import './Footer.scss';
 
 type FooterProps = {};
@@ -36,7 +37,10 @@ const Footer:FC<FooterProps> = ({}) => {
             </div>
             <div className="footer__column">
               <h4 className="footer__title">Site Language</h4>
-              English
+              <DropDown label="English" directionTop>
+                <div>Turkish</div>
+                <div>English</div>
+              </DropDown>
             </div>
           </div>
         </Container>

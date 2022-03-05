@@ -3,6 +3,7 @@ $color-black: #000;
 $color-grey: #1e1e1e;
 $color-green: #76b900;
 $color-text: #afafaf;
+$color-placeholder: #8e9fad;
 
 :root {
   --c-white: #{$color-white};
@@ -10,4 +11,5 @@ $color-text: #afafaf;
   --c-grey: #{$color-grey};
   --c-green: #{$color-green};
   --c-text: #{$color-text};
+  --c-placeholder: #{$color-placeholder};
 }

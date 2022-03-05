@@ -17,6 +17,7 @@ const AppLink:FC<LinkProps> = ({ primary, secondary, block, href, title, childre
   const classNames = cx('link', {
     'link--primary': primary,
     'link--secondary': secondary,
+    'link--default': !primary && !secondary,
     'link--block': block,
     'link--active': showActiveState && asPath === href,
   });

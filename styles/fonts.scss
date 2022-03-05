@@ -2,25 +2,19 @@
   font-family: "GreycliffCF";
   font-style: normal;
   font-weight: 400;
-  font-stretch: 100%;
-  font-display: swap;
   src: url("/fonts/greycliffcf-regular.woff2") format("woff2");
 }
-/* cyrillic */
+
 @font-face {
   font-family: "GreycliffCF";
   font-style: normal;
   font-weight: 600;
-  font-stretch: 100%;
-  font-display: swap;
   src: url("/fonts/greycliffcf-demibold.woff2") format("woff2");
 }
-/* greek-ext */
+
 @font-face {
   font-family: "GreycliffCF";
   font-style: normal;
   font-weight: 700;
-  font-stretch: 100%;
-  font-display: swap;
   src: url("/fonts/greycliffcf-bold.woff2");
 }

@@ -1,11 +1,18 @@
 .button {
-  border-color: transparent;
+  border: 1px solid transparent;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   &--primary {
+    border-color: var(--c-green);
     background-color: var(--c-green);
     color: var(--c-white);
-    padding: 6px 40px;
+    padding: 0 40px;
+    line-height: 38px;
+    font-weight: 700;
+    letter-spacing: 0.57px;
+  }
+  &--transparent {
+    background-color: transparent;
   }
 }

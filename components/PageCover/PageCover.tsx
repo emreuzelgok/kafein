@@ -17,7 +17,7 @@ const PageCover:FC<PageCoverProps> = ({ children }) => {
           <p className="page-cover__desc">
             With the Cloud Gaming, you can join, play, and share games online with anyone in the world. Play any game on any device!
           </p>
-          <div>{children}</div>
+          <div className="page-cover__child">{children}</div>
         </div>
       </Container>
     </div>

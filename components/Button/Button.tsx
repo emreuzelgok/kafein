@@ -7,11 +7,13 @@ type ButtonProps = JSX.IntrinsicElements['button'] & {
   width?: number;
   title?: string;
   primary?: boolean;
+  transparent?: boolean, 
 };
 
-const Button:FC<ButtonProps> = ({ title, children, primary, className, ...props }) => {
+const Button:FC<ButtonProps> = ({ title, children, primary, transparent, className, ...props }) => {
   const classNames = cx('button', className, {
-    'button--primary': primary
+    'button--primary': primary,
+    'button--transparent': transparent
   });
   return (
     <button className={classNames} {...props}>

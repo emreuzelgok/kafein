@@ -1,0 +1,28 @@
+.letter-card {
+  margin-left: 20px;
+  flex-grow: 1;
+  &__letter {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    span {
+      padding-top: 5px;
+      position: relative;
+      z-index: 5;
+      font-weight: 700;
+      font-size: 30px;
+      color: var(--c-grey);
+    }
+    svg {
+      position: absolute;
+    }
+  }
+  & + & {
+    margin-top: 30px;
+  }
+}

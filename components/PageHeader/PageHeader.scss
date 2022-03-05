@@ -1,0 +1,14 @@
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 24px;
+  &__title {
+    font-size: 28px;
+    color: var(--c-white);
+    margin: 0;
+  }
+  &__content {
+  }
+}

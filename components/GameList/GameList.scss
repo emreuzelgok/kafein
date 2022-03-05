@@ -1,0 +1,13 @@
+.gamelist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -8px;
+  &__item {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 50%;
+  }
+}

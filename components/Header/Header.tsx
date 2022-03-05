@@ -21,7 +21,9 @@ const Header:FC<HeaderProps> = ({}) => {
       <Container fluid>
         <Container className="header__container">
           <div className="header__logo">
-            <Image src="/img/logo.jpg" width={317} height={53} alt="logo" />
+            <Link href="/">
+              <Image src="/img/logo.jpg" width={317} height={53} alt="logo" />
+            </Link>
           </div>
           <div className="header__menu">
             <nav className="header__nav">

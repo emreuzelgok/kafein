@@ -1,0 +1,327 @@
+[
+  {
+    "id": 18,
+    "name": "Cafe Dress Up",
+    "state": [
+      "Available",
+      "Patching"
+    ],
+    "genres": [
+      "MOBA/MMO",
+      "Simulation",
+      "Action"
+    ]
+  },
+  {
+    "id": 1,
+    "name": "A Blast",
+    "state": [
+      "Patching",
+      "Maintenance"
+    ],
+    "genres": [
+      "Simulation",
+      "Kids/Family"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "A Blobs Tale",
+    "state": [
+      "Available",
+      "Maintenance"
+    ],
+    "genres": [
+      "Adventure",
+      "Sports",
+      "Shooters"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "A Blonde In The Dark",
+    "state": [
+      "Available"
+    ],
+    "genres": [
+      "Demo",
+      "Simulation",
+      "Racing"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "A Bonte Christmas",
+    "state": [
+      "Available",
+      "Maintenance"
+    ],
+    "genres": [
+      "Sports",
+      "Kids/Family"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "A Bot",
+    "state": [
+      "Patching"
+    ],
+    "genres": [
+      "Platformer",
+      "Adventure",
+      "Demo"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "A Bugs Land",
+    "state": [
+      "Available"
+    ],
+    "genres": [
+      "Shooters",
+      "RPG"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "B29 Assault",
+    "state": [
+      "Patching",
+      "Available"
+    ],
+    "genres": [
+      "Platformer",
+      "Casual",
+      "Battle Royale"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Baba Yaga",
+    "state": [
+      "Maintenance"
+    ],
+    "genres": [
+      "Sports"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Babe Rescue",
+    "state": [
+      "Available"
+    ],
+    "genres": [
+      "Casual",
+      "RPG"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Baby Baby Baby",
+    "state": [
+      "Patching"
+    ],
+    "genres": [
+      "Casual",
+      "Horror",
+      "Demo"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Baby Bathing",
+    "state": [
+      "Available"
+    ],
+    "genres": [
+      "MOBA/MMO",
+      "Adventure",
+      "Sports"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Baby Blimp",
+    "state": [
+      "Maintenance"
+    ],
+    "genres": [
+      "Casual",
+      "Shooters",
+      "Platformer"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Baby Care Rush",
+    "state": [
+      "Maintenance"
+    ],
+    "genres": [
+      "MOBA/MMO",
+      "Horror",
+      "Action"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Cabbage Maniac",
+    "state": [
+      "Patching",
+      "Maintenance"
+    ],
+    "genres": [
+      "Kids/Family",
+      "Demo"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Cactus McCoy",
+    "state": [
+      "Maintenance"
+    ],
+    "genres": [
+      "RPG",
+      "Racing"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Cactus Mccoy 2",
+    "state": [
+      "Available"
+    ],
+    "genres": [
+      "Open World",
+      "RPG",
+      "Adventure"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Caesars Day Off",
+    "state": [
+      "Maintenance"
+    ],
+    "genres": [
+      "RPG",
+      "Open World"
+    ]
+  },
+ 
+  {
+    "id": 19,
+    "name": "Cafe Waitress",
+    "state": [
+      "Maintenance",
+      "Available"
+    ],
+    "genres": [
+      "Adventure",
+      "Sports",
+      "Strategy"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Cake Factory",
+    "state": [
+      "Maintenance"
+    ],
+    "genres": [
+      "Open World",
+      "Horror",
+      "Platformer"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Dad Game",
+    "state": [
+      "Available",
+      "Patching"
+    ],
+    "genres": [
+      "Platformer",
+      "Horror",
+      "Casual"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Dad N Me",
+    "state": [
+      "Patching",
+      "Available"
+    ],
+    "genres": [
+      "Casual",
+      "Shooters",
+      "Kids/Family"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Daffy Duck Featherweight Duck",
+    "state": [
+      "Maintenance",
+      "Available"
+    ],
+    "genres": [
+      "Kids/Family",
+      "Casual",
+      "Adventure"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Daffys Studio Adventures",
+    "state": [
+      "Available"
+    ],
+    "genres": [
+      "Casual",
+      "Shooters",
+      "Open World"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Dale And Peakot",
+    "state": [
+      "Patching",
+      "Available"
+    ],
+    "genres": [
+      "Shooters",
+      "Horror"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Dalek Break Out",
+    "state": [
+      "Maintenance"
+    ],
+    "genres": [
+      "MOBA/MMO",
+      "Strategy"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Dance Dance Eqypt Queen",
+    "state": [
+      "Available",
+      "Patching"
+    ],
+    "genres": [
+      "Sports",
+      "Racing"
+    ]
+  }
+]

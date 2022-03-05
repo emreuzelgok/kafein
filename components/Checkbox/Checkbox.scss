@@ -1,0 +1,37 @@
+.checkbox {
+  display: block;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--c-text);
+  display: flex;
+  align-items: center;
+  line-height: 24px;
+  &__input {
+    display: none;
+    &:checked ~ .checkbox__checkmark {
+      background-color: var(--c-green);
+      border-color: var(--c-green);
+      svg {
+        display: block;
+      }
+    }
+  }
+  &__label {
+    padding-top: 2.5px;
+  }
+  &__checkmark {
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--c-text);
+    margin-right: 20px;
+    svg {
+      display: none;
+    }
+  }
+  & + & {
+    margin-top: 24px;
+  }
+}
