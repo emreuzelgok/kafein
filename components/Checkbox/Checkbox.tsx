@@ -1,6 +1,5 @@
 import React, { ChangeEvent, FC, useState } from 'react';
 import Check from '../Svg/check.svg';
-
 import './Checkbox.scss';
 
 type CheckboxProps = JSX.IntrinsicElements['input'] & {

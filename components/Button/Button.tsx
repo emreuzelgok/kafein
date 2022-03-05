@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import cx from 'classnames';
-
 import './Button.scss';
 
 type ButtonProps = JSX.IntrinsicElements['button'] & {

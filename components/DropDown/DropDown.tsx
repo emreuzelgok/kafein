@@ -2,7 +2,6 @@ import React, { FC, useCallback, useRef, useState } from 'react';
 import cx from 'classnames';
 import Arrow from '../Svg/arrow.svg';
 import useOnClickOutside from '../../hooks/useOnClickOutside';
-
 import './DropDown.scss';
 
 type DropDownProps = {
