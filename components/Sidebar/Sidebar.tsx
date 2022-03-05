@@ -13,11 +13,11 @@ games as TGame[];
 
 const stateFilters = Array.from(new Set(
   games.map(item => item.state).flat()
-)).filter(item => item !== null) as string[];
+)).filter(item => item !== null).sort() as string[];
 
 const genreFilters = Array.from(new Set(
   games.map(item => item.genres).flat()
-)).filter(item => item !== null) as string[];
+)).filter(item => item !== null).sort() as string[];
 
 type SidebarProps = {};
 
