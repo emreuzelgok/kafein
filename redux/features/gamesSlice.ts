@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-plusplus */
 import { createSlice, createSelector } from '@reduxjs/toolkit';
 import type { RootState } from '../store';
@@ -25,18 +26,12 @@ export const gamesSlice = createSlice({
   initialState,
   reducers: {
     sortByDesc: (state) => {
-      return {
-        ...state,
-        sortBy: 'desc',
-        letters: state.letters.reverse(),
-      };
+      state.sortBy = 'desc';
+      state.letters = state.letters.reverse();
     },
     sortByAsc: (state) => {
-      return {
-        ...state,
-        sortBy: 'asc',
-        letters: state.letters.reverse(),
-      };
+      state.sortBy = 'asc';
+      state.letters = state.letters.reverse();
     },
   },
 });
