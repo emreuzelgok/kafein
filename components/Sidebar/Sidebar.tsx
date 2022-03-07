@@ -1,47 +1,44 @@
-import React, { ChangeEvent, FC, FormEvent, SyntheticEvent } from 'react';
+import { ChangeEvent, FC } from 'react';
 import Card from '../Card';
 import Accordion from '../Accordion';
 import Checkbox from '../Checkbox';
 import games from '../../games.json';
-import { TGame } from '../../types';
-import { setGenreFilters, setStateFilters } from '../../redux/features/filtersSlice';
+import type { TGame } from '../../types';
+import { setGenreFilters, setStateFilters, selectFilters } from '../../redux/features/filtersSlice';
 import { useAppSelector, useAppDispatch } from '../../redux/hooks';
-import { selectFilters } from '../../redux/features/filtersSlice';
 import './Sidebar.scss';
 
 games as TGame[];
 
-const stateFilters = Array.from(new Set(
-  games.map(item => item.state).flat()
-)).filter(item => item !== null).sort() as string[];
+const stateFilters = Array.from(new Set(games.map((item) => item.state).flat()))
+  .filter((item) => item !== null)
+  .sort() as string[];
 
-const genreFilters = Array.from(new Set(
-  games.map(item => item.genres).flat()
-)).filter(item => item !== null).sort() as string[];
+const genreFilters = Array.from(new Set(games.map((item) => item.genres).flat()))
+  .filter((item) => item !== null)
+  .sort() as string[];
 
-type SidebarProps = {};
-
-const Sidebar:FC<SidebarProps> = () => {
+const Sidebar: FC = () => {
   const dispatch = useAppDispatch();
   const { states, genres } = useAppSelector(selectFilters);
 
   const onChangeStateFilter = (e: ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.name; 
+    const value = e.target.name;
     if (states.includes(value)) {
-      dispatch(setStateFilters(states.filter(item => item !== value)));
+      dispatch(setStateFilters(states.filter((item) => item !== value)));
     } else {
       dispatch(setStateFilters([...states, value]));
     }
-  }
+  };
 
   const onChangeGenreFilter = (e: ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.name; 
+    const value = e.target.name;
     if (genres.includes(value)) {
-      dispatch(setGenreFilters(genres.filter(item => item !== value)));
+      dispatch(setGenreFilters(genres.filter((item) => item !== value)));
     } else {
       dispatch(setGenreFilters([...genres, value]));
     }
-  }
+  };
 
   return (
     <aside className="sidebar">
@@ -71,6 +68,6 @@ const Sidebar:FC<SidebarProps> = () => {
       </Card>
     </aside>
   );
-}
+};
 
 export default Sidebar;

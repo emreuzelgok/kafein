@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Facebook from '../Svg/facebook.svg';
 import Instagram from '../Svg/instagram.svg';
 import Twitter from '../Svg/twitter.svg';
@@ -10,15 +10,13 @@ type SocialLinkProps = {
   href?: string;
 };
 
-const SocialLink:FC<SocialLinkProps> = ({href, type = 'facebook'}) => {
-  return (
-    <a href={href} className="social-link">
-      {type === 'facebook' && <Facebook />}
-      {type === 'instagram' && <Instagram />}
-      {type === 'twitter' && <Twitter />}
-      {type === 'youtube' && <Youtube />}
-    </a>
-  );
-}
+const SocialLink: FC<SocialLinkProps> = ({ href, type = 'facebook' }) => (
+  <a href={href} className="social-link">
+    {type === 'facebook' && <Facebook />}
+    {type === 'instagram' && <Instagram />}
+    {type === 'twitter' && <Twitter />}
+    {type === 'youtube' && <Youtube />}
+  </a>
+);
 
 export default SocialLink;

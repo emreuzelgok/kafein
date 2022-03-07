@@ -1,17 +1,16 @@
+/* eslint-disable no-plusplus */
 import { createSlice, createSelector } from '@reduxjs/toolkit';
-import { RootState } from '../store';
+import type { RootState } from '../store';
 import games from '../../games.json';
 import { TGame } from '../../types';
 
 interface GamesState {
-  sortBy: 'asc' | 'desc',
-  letters: string[],
-  items: TGame[],
+  sortBy: 'asc' | 'desc';
+  letters: string[];
+  items: TGame[];
 }
 
-const letters = Array.from(new Set(
-  games.map(item => item.name.toLocaleLowerCase()[0]).sort()
-));
+const letters = Array.from(new Set(games.map((item) => item.name.toLocaleLowerCase()[0]).sort()));
 
 games as TGame[];
 
@@ -26,14 +25,20 @@ export const gamesSlice = createSlice({
   initialState,
   reducers: {
     sortByDesc: (state) => {
-      state.sortBy = 'desc';
-      state.letters = state.letters.reverse();
+      return {
+        ...state,
+        sortBy: 'desc',
+        letters: state.letters.reverse(),
+      };
     },
     sortByAsc: (state) => {
-      state.sortBy = 'asc';
-      state.letters = state.letters.reverse();
+      return {
+        ...state,
+        sortBy: 'asc',
+        letters: state.letters.reverse(),
+      };
     },
-  }
+  },
 });
 
 export const { sortByAsc, sortByDesc } = gamesSlice.actions;
@@ -43,37 +48,34 @@ export const selectGames = (state: RootState) => state.games;
 export const selectFilteredGames = createSelector(
   selectGames,
   (state: RootState) => state.filters,
-  (games, filters) => {
-    let items = games.items;
+  (gamesState, filters) => {
+    let { items } = gamesState;
 
-    if (!!filters.states.length) {
+    if (filters.states.length) {
       for (let i = 0; i < filters.states.length; i++) {
-        const stateFilter= filters.states[i];
-        items = items.filter(item => item.state.includes(stateFilter));
+        const stateFilter = filters.states[i];
+        items = items.filter((item) => item.state.includes(stateFilter));
       }
     }
 
-    if (!!filters.genres.length) {
+    if (filters.genres.length) {
       for (let i = 0; i < filters.genres.length; i++) {
-        const genreFilter= filters.genres[i];
-        items = items.filter(item => item.genres.includes(genreFilter));
+        const genreFilter = filters.genres[i];
+        items = items.filter((item) => item.genres.includes(genreFilter));
       }
     }
 
     const state = {
       ...games,
-      items
+      items,
     };
 
     return state;
-  }
+  },
 );
 
-export const selectGamesNames = createSelector(
-  selectGames,
-  (games) => {
-    return [...games.items.map(item => item.name).sort()];
-  }
-);
+export const selectGamesNames = createSelector(selectGames, (gamesState) => [
+  ...gamesState.items.map((item) => item.name).sort(),
+]);
 
-export default gamesSlice.reducer
+export default gamesSlice.reducer;

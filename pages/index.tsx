@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import PageCover from '../components/PageCover';
@@ -34,17 +35,19 @@ const Home: NextPage = () => {
         <Sidebar />
         <Container grow>
           {letters.map((letter, idx) => {
-            const games = items.filter(item => item.name.toLocaleLowerCase()[0] === letter);
-            return !!games.length && (
-              <LetterCard key={`letter-${idx}`} letter={letter}>
-                <GameList items={games}/>
-              </LetterCard>
+            const games = items.filter((item) => item.name.toLocaleLowerCase()[0] === letter);
+            return (
+              !!games.length && (
+                <LetterCard key={`letter-${idx}`} letter={letter}>
+                  <GameList items={games} />
+                </LetterCard>
+              )
             );
           })}
         </Container>
       </Container>
     </div>
-  )
-}
+  );
+};
 
 export default Home;

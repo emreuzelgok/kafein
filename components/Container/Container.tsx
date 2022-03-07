@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import cx from 'classnames';
 import './Container.scss';
 
@@ -10,18 +10,14 @@ type ContainerProps = {
   grow?: boolean;
 };
 
-const Container:FC<ContainerProps> = ({ fluid, children, fullHeight, className, flex, grow }) => {
+const Container: FC<ContainerProps> = ({ fluid, children, fullHeight, className, flex, grow }) => {
   const classNames = cx('container', className, {
     'container--fluid': fluid,
     'container--flex': flex,
     'container--grow': grow,
     'container--full-height': fullHeight,
   });
-  return (
-    <div className={classNames}>
-      {children}
-    </div>
-  );
-}
+  return <div className={classNames}>{children}</div>;
+};
 
 export default Container;

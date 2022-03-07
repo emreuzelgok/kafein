@@ -6,7 +6,7 @@ const store = configureStore({
   reducer: {
     games: gamesReducer,
     filters: filtersReducer,
-  }
+  },
 });
 
 export default store;

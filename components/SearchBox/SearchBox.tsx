@@ -1,4 +1,5 @@
-import React, { ChangeEvent, FC, useState, KeyboardEvent, useRef, RefObject } from 'react';
+/* eslint-disable react/no-array-index-key */
+import { ChangeEvent, FC, useState, KeyboardEvent, useRef } from 'react';
 import cx from 'classnames';
 import Search from '../Svg/search.svg';
 import Close from '../Svg/close.svg';
@@ -8,17 +9,21 @@ import useOnClickOutside from '../../hooks/useOnClickOutside';
 
 import './SearchBox.scss';
 
-type SearchBoxProps = {};
-
 type SearchBoxItemProps = {
   label?: string;
   selected?: boolean;
   query?: string;
   onClick?: (item: string) => void;
   onFocus?: () => void;
-}
+};
 
-const SearchBoxItem: FC<SearchBoxItemProps> = ({ label = '', selected, query = '', onClick, onFocus }) => {
+const SearchBoxItem: FC<SearchBoxItemProps> = ({
+  label = '',
+  selected,
+  query = '',
+  onClick,
+  onFocus,
+}) => {
   const classNames = cx('search-box__item', {
     'search-box__selected': selected,
   });
@@ -38,7 +43,7 @@ const SearchBoxItem: FC<SearchBoxItemProps> = ({ label = '', selected, query = '
   );
 };
 
-const SearchBox:FC<SearchBoxProps> = ({}) => {
+const SearchBox: FC = () => {
   const [query, setQuery] = useState<string>('');
   const [selectedIndex, setSelectedIndex] = useState<number>(-1);
   const [touched, setTouched] = useState<boolean>(false);
@@ -46,9 +51,9 @@ const SearchBox:FC<SearchBoxProps> = ({}) => {
   const searchBoxRef = useRef(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const games = useAppSelector(selectGamesNames);
-  const filteredGames = games.filter(item => {
-    return item.toLowerCase().startsWith(query.toLocaleLowerCase());
-  }).slice(0, 10);
+  const filteredGames = games
+    .filter((item) => item.toLowerCase().startsWith(query.toLocaleLowerCase()))
+    .slice(0, 10);
 
   useOnClickOutside(searchBoxRef, () => setShowSuggestions(false));
 
@@ -58,7 +63,7 @@ const SearchBox:FC<SearchBoxProps> = ({}) => {
       setTouched(true);
     }
   };
-  
+
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
     setShowSuggestions(true);
@@ -133,12 +138,12 @@ const SearchBox:FC<SearchBoxProps> = ({}) => {
         </div>
       )}
       {(query || showSuggestions) && (
-        <div className="search-box__clear" onClick={clear}>
+        <div className="search-box__clear" onClick={clear} aria-hidden="true">
           <Close />
         </div>
       )}
     </div>
   );
-}
+};
 
 export default SearchBox;

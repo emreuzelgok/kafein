@@ -1,14 +1,14 @@
-import React, { FC } from 'react';
-import Container from '../Container';
+import { FC } from 'react';
 import cx from 'classnames';
+import Container from '../Container';
 import './PageCover.scss';
 
 type PageCoverProps = {
   title?: string;
-  description?: string; 
+  description?: string;
 };
 
-const PageCover:FC<PageCoverProps> = ({ children, title, description }) => {
+const PageCover: FC<PageCoverProps> = ({ children, title, description }) => {
   const classNames = cx('page-cover');
   return (
     <div className={classNames}>
@@ -21,6 +21,6 @@ const PageCover:FC<PageCoverProps> = ({ children, title, description }) => {
       </Container>
     </div>
   );
-}
+};
 
 export default PageCover;

@@ -1,5 +1,5 @@
 export interface TGame {
-  id: number,
+  id: number;
   name: string;
   state: string[];
   genres: string[];

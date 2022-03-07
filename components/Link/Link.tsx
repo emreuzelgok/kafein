@@ -1,4 +1,6 @@
-import React, { FC } from 'react';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/jsx-props-no-spreading */
+import { FC } from 'react';
 import LinkBase, { LinkProps as LinkBaseProps } from 'next/link';
 import { useRouter } from 'next/router';
 import cx from 'classnames';
@@ -12,7 +14,16 @@ type LinkProps = LinkBaseProps & {
   showActiveState?: boolean;
 };
 
-const Link:FC<LinkProps> = ({ primary, secondary, block, href, title, children, showActiveState, ...rest }) => {
+const Link: FC<LinkProps> = ({
+  primary,
+  secondary,
+  block,
+  href,
+  title,
+  children,
+  showActiveState,
+  ...rest
+}) => {
   const { asPath } = useRouter();
   const classNames = cx('link', {
     'link--primary': primary,
@@ -23,11 +34,9 @@ const Link:FC<LinkProps> = ({ primary, secondary, block, href, title, children, 
   });
   return (
     <LinkBase href={href} {...rest}>
-      <a className={classNames}>
-        {title || children}
-      </a>
+      <a className={classNames}>{title || children}</a>
     </LinkBase>
   );
-}
+};
 
 export default Link;

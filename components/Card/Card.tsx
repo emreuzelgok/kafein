@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import cx from 'classnames';
 import './Card.scss';
 
@@ -6,13 +6,9 @@ type CardProps = {
   className?: string;
 };
 
-const Card:FC<CardProps> = ({children, className}) => {
+const Card: FC<CardProps> = ({ children, className }) => {
   const classNames = cx('card', className);
-  return (
-    <div className={classNames}>
-      {children}
-    </div>
-  );
-}
+  return <div className={classNames}>{children}</div>;
+};
 
 export default Card;

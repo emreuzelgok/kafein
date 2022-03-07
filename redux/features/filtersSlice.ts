@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit'
-import { RootState } from '../store';
+import { createSlice } from '@reduxjs/toolkit';
+import type { RootState } from '../store';
 
 export interface FiltersState {
   states: string[];
@@ -16,16 +16,22 @@ export const filtersSlice = createSlice({
   initialState,
   reducers: {
     setStateFilters: (state, action) => {
-      state.states = action.payload;
+      return {
+        ...state,
+        states: action.payload,
+      };
     },
     setGenreFilters: (state, action) => {
-      state.genres = action.payload;
-    }
-  }
+      return {
+        ...state,
+        genres: action.payload,
+      };
+    },
+  },
 });
 
 export const { setStateFilters, setGenreFilters } = filtersSlice.actions;
 
 export const selectFilters = (state: RootState) => state.filters;
 
-export default filtersSlice.reducer
+export default filtersSlice.reducer;

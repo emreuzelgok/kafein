@@ -7,12 +7,12 @@ const nextConfig = {
 
     // remove the webpack rule to error on global css/scss
     oneOfRules = oneOfRules.filter(
-      (x) => x.issuer || !x.use || x.use.loader !== "error-loader"
+      (x) => x.issuer || !x.use || x.use.loader !== 'error-loader',
     );
 
     // modify the webpack rule targeting only *.module.scss to target only *.scss
     const newScssRule = oneOfRules.find(
-      (x) => x.test && x.test.toString() === /\.module\.(scss|sass)$/.toString()
+      (x) => x.test && x.test.toString() === /\.module\.(scss|sass)$/.toString(),
     );
     newScssRule.test = /\.(scss|sass)$/;
     newScssRule.sideEffects = true;
@@ -29,18 +29,18 @@ const nextConfig = {
       config.module.rules.findIndex((x) => x.oneOf),
       1,
       {
-        oneOf: oneOfRules
-      }
+        oneOf: oneOfRules,
+      },
     );
 
     config.module.rules.push({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
       use: ['@svgr/webpack'],
-    })
+    });
 
     return config;
-  }
-}
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
